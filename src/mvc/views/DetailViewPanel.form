@@ -29,7 +29,7 @@
                   <Component id="txt_mobileno" max="32767" attributes="0"/>
                   <Component id="txt_email" pref="131" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="38" max="32767" attributes="0"/>
+              <EmptySpace pref="32" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -59,12 +59,12 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Name"/>
+        <Property name="text" type="java.lang.String" value="Name*"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Mobile No"/>
+        <Property name="text" type="java.lang.String" value="Mobile No*"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">

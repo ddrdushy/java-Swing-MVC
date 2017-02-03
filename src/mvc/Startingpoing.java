@@ -5,15 +5,15 @@
 package mvc;
 
 import javax.swing.SwingUtilities;
-import mvc.controller.Controller;
-import mvc.models.User;
-import mvc.views.MainGUI;
+import mvc.controller.AddressBookController;
+import mvc.models.Person;
+import mvc.views.AddressBookMainGUI;
 
 /**
  *
  * @author Admin
  */
-public class Mvc {
+public class Startingpoing {
 
     /**
      * @param args the command line arguments
@@ -26,9 +26,9 @@ public class Mvc {
             public void run() {
                // User model=new User();
                // MainGUI view=new MainGUI("-");
-                Controller controller=new Controller();
+                AddressBookController controller=new AddressBookController();
                 controller.control();
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
             }
         });
     }

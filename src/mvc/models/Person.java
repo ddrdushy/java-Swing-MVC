@@ -8,7 +8,7 @@ package mvc.models;
  *
  * @author Admin
  */
-public class User {
+public class Person {
     private String name;
     private String mob;
     private String email;

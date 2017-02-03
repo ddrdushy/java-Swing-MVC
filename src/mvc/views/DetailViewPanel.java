@@ -8,13 +8,32 @@ package mvc.views;
  *
  * @author Admin
  */
-public class DetailsPanel extends javax.swing.JPanel {
+public class DetailViewPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form NewJPanel
      */
-    public DetailsPanel() {
+    public DetailViewPanel() {
         initComponents();
+    }
+    
+    public javax.swing.JTextField getNameField()
+    {
+        
+        return txt_name;
+        
+    }
+     public javax.swing.JTextField getMobileField()
+    {
+        
+        return txt_mobileno;
+        
+    }
+      public javax.swing.JTextField geteMailField()
+    {
+        
+        return txt_email;
+        
     }
 
     /**
@@ -33,9 +52,9 @@ public class DetailsPanel extends javax.swing.JPanel {
         txt_mobileno = new javax.swing.JTextField();
         txt_email = new javax.swing.JTextField();
 
-        jLabel1.setText("Name");
+        jLabel1.setText("Name*");
 
-        jLabel2.setText("Mobile No");
+        jLabel2.setText("Mobile No*");
 
         jLabel3.setText("Email");
 
@@ -60,7 +79,7 @@ public class DetailsPanel extends javax.swing.JPanel {
                     .addComponent(txt_name)
                     .addComponent(txt_mobileno)
                     .addComponent(txt_email, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE))
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

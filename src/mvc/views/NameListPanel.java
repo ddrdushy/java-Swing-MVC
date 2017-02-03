@@ -8,12 +8,12 @@ package mvc.views;
  *
  * @author Admin
  */
-public class ContactList extends javax.swing.JPanel {
+public class NameListPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form ContactList
      */
-    public ContactList() {
+    public NameListPanel() {
         initComponents();
     }
 

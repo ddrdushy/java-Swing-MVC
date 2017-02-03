@@ -14,22 +14,22 @@ import javax.swing.JPanel;
  *
  * @author Admin
  */
-public class EditContact {
+public class EditContactPanel {
     private JFrame frame;
-    private DetailsPanel detailsPanel;
+    private DetailViewPanel detailsPanel;
     private JButton btn_edit;
     private JButton btn_cancel;
     private JPanel panel_btn;
 
     
-    public EditContact(String text){
+    public EditContactPanel(String text){
         frame = new JFrame("View");
         frame.getContentPane().setLayout(new BorderLayout());
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setSize(350, 250);
         frame.setVisible(true);
         
-        detailsPanel = new DetailsPanel();
+        detailsPanel = new DetailViewPanel();
         frame.getContentPane().add(detailsPanel,BorderLayout.CENTER);
         
         panel_btn= new JPanel();
