@@ -28,14 +28,13 @@ public class ContactImpl implements ContactIntf{
 
      @Override
      public List loadUsers() {
-       List<Person> lp;
+       List<Person> lp = null;
        Connection con =DbConnect.getInstance().getConnect();
         try {
             Statement st = con.createStatement();
             String qry = "select * from addbook order by name asc";
             ResultSet rs = st.executeQuery(qry);
             lp=new ArrayList<Person>();
-            lp=null;
             while(rs.next()){
                 //Person[] ob = {rs.getString("name").toString()};
                 //dtm.addRow(ob);
@@ -69,20 +68,20 @@ public class ContactImpl implements ContactIntf{
         TableModel tbl = mPage.getjTable1().getModel();
         String name = tbl.getValueAt(idx, 0).toString();
         
-       try {
-           Connection con =DbConnect.getInstance().getConnect();
-           Statement st = con.createStatement();
-           String qry = "select * from addbook where name='"+name+"'";
-           ResultSet rs = st.executeQuery(qry);
-           while(rs.next()){
-            
-             u.setName(rs.getString("name"));
-             u.setMob(rs.getString("mob"));
-             u.setEmail(rs.getString("email"));
-             
-           }
-       } catch (Exception e) {
-       }
+        try {
+            Connection con =DbConnect.getInstance().getConnect();
+            Statement st = con.createStatement();
+            String qry = "select * from addbook where name='"+name+"'";
+            ResultSet rs = st.executeQuery(qry);
+            while(rs.next()){
+
+              u.setName(rs.getString("name"));
+              u.setMob(rs.getString("mob"));
+              u.setEmail(rs.getString("email"));
+
+            }
+        } catch (Exception e) {
+        }
         }
         return u;
     }

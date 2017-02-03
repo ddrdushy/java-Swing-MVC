@@ -4,10 +4,12 @@
  */
 package mvc.controller;
 
+import java.awt.List;
 import mvc.models.Person;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import mvc.dao.ContactImpl;
 import mvc.models.Person;
 import mvc.views.AddContactDialog;
 import mvc.views.EditContactPanel;
@@ -17,7 +19,7 @@ import mvc.views.AddressBookMainGUI;
  *
  * @author Admin
  */
-public class AddressBookController {
+public class AddressBookController extends ContactImpl{
     
     private Person person;
     private AddressBookMainGUI view;
@@ -26,9 +28,8 @@ public class AddressBookController {
     private EditContactPanel edit;
     
     public AddressBookController(){
-        view =new AddressBookMainGUI("View");
+        view = new AddressBookMainGUI("View", List);
         //this.model = model;
-        
     }   
     public AddressBookController(Person person ,String action){
         Person p=person;
@@ -67,9 +68,8 @@ public class AddressBookController {
     
     private void openAdd(){
         add=new AddContactDialog();
-      /*Person person = add.sendPerson();*/
+        /*Person person = add.sendPerson();*/
         System.out.println("In controller  openAdd ");
-        
     }
     public void addUser(Person person)
     {
@@ -83,14 +83,5 @@ public class AddressBookController {
         
     private void openDelete(){
         //AddContact add=new AddContact("add");
-    }
-    private void linkBtnandLabel(){
-       // view.setText(Integer.toString(model.getX()));        //model.incX();
-
-    }
-    
-    private void linkBtnandLabel2(){
-      //  model.decX();
-       // view.setText(Integer.toString(model.getX()));
     }
 }
